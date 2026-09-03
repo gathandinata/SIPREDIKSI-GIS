@@ -1,0 +1,767 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.main-content {
+    min-height: 100vh;
+    margin-left: 280px;
+    background: #f5f7fb;
+    padding: 0 34px 34px;
+}
+
+/* ==============================
+   TOPBAR
+============================== */
+
+.topbar {
+    height: 72px;
+    padding: 0 32px;
+    background: #ffffff;
+    border-bottom: 1px solid #e8edf5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.btn-menu {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    color: #172033;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.notification-icon {
+    font-size: 18px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #0b3b70;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.admin-info strong {
+    font-size: 15px;
+    color: #101828;
+}
+
+.admin-info span {
+    font-size: 13px;
+    color: #667085;
+}
+
+/* ==============================
+   PAGE HEADER
+============================== */
+
+.page-header {
+    padding: 26px 32px 0;
+}
+
+.page-header h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #101828;
+}
+
+.page-header p {
+    margin: 0;
+    font-size: 15px;
+    color: #667085;
+}
+
+.page-header p span {
+    margin: 0 10px;
+    color: #98a2b3;
+}
+
+.page-header p strong {
+    color: #0b63ce;
+    font-weight: 600;
+}
+
+/* ==============================
+   BARIS PERTAMA - SUMMARY CARD
+============================== */
+
+.map-summary-row {
+    padding: 24px 32px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.summary-card {
+    min-height: 116px;
+    padding: 22px 24px;
+    background: #ffffff;
+    border: 1px solid #e4eaf3;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.summary-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.summary-icon.blue {
+    background: #e8f1ff;
+    color: #1f6fd1;
+}
+
+.summary-icon.red {
+    background: #fdecec;
+    color: #d92d20;
+}
+
+.summary-icon.green {
+    background: #e8f7e8;
+    color: #2e7d32;
+}
+
+.summary-icon.yellow {
+    background: #fff4df;
+    color: #f0a000;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.summary-content span {
+    font-size: 15px;
+    color: #344054;
+    font-weight: 500;
+}
+
+.summary-content strong {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    font-size: 28px;
+    line-height: 1.1;
+    color: #101828;
+    font-weight: 800;
+}
+
+.summary-content strong em {
+    font-size: 14px;
+    color: #475467;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.summary-content small {
+    font-size: 14px;
+    color: #667085;
+    font-weight: 500;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 1400px) {
+    .map-summary-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+
+    .page-header {
+        padding: 22px 18px 0;
+    }
+
+    .page-header h2 {
+        font-size: 24px;
+    }
+
+    .map-summary-row {
+        padding: 22px 18px 0;
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        min-height: 104px;
+    }
+
+    .summary-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 28px;
+    }
+}
+
+/* ==============================
+   BARIS KEDUA - FILTER, PETA, RINGKASAN
+============================== */
+
+.map-content-row {
+    padding: 24px 32px 34px;
+    display: grid;
+    grid-template-columns: 290px 1fr 350px;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.map-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.map-filter-card,
+.legend-card,
+.map-card,
+.selected-region-card {
+    background: #ffffff;
+    border: 1px solid #e4eaf3;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.map-filter-card,
+.legend-card,
+.map-card,
+.selected-region-card {
+    padding: 20px 22px;
+}
+
+.map-filter-card h3,
+.legend-card h3,
+.map-card h3,
+.selected-region-card h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #172033;
+}
+
+.map-filter-form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #344054;
+}
+
+.form-group select {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    border: 1px solid #d7deea;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group select:focus {
+    border-color: #1f6fd1;
+    box-shadow: 0 0 0 3px rgba(31, 111, 209, 0.12);
+}
+
+.btn-show-map {
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background: #1f6fd1;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.2s ease;
+}
+
+.btn-show-map:hover {
+    background: #185db2;
+}
+
+/* ==============================
+   LEGENDA
+============================== */
+
+.legend-card p {
+    margin: 12px 0 16px;
+    font-size: 13px;
+    color: #344054;
+}
+
+.legend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.legend-item {
+    display: grid;
+    grid-template-columns: 26px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.legend-color {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.legend-color.sangat-tinggi,
+.category-badge.sangat-tinggi,
+.popup-badge.sangat-tinggi {
+    background: #d92d20;
+    color: #ffffff;
+}
+
+.legend-color.tinggi,
+.category-badge.tinggi,
+.popup-badge.tinggi {
+    background: #f97316;
+    color: #ffffff;
+}
+
+.legend-color.sedang,
+.category-badge.sedang,
+.popup-badge.sedang {
+    background: #facc15;
+    color: #344054;
+}
+
+.legend-color.rendah,
+.category-badge.rendah,
+.popup-badge.rendah {
+    background: #a3d977;
+    color: #234018;
+}
+
+.legend-color.sangat-rendah,
+.category-badge.sangat-rendah,
+.popup-badge.sangat-rendah {
+    background: #7cc66a;
+    color: #123b16;
+}
+
+.legend-color.tidak-ada-data,
+.category-badge.tidak-ada-data,
+.popup-badge.tidak-ada-data {
+    background: #f3f4f6;
+    color: #667085;
+}
+
+.legend-item strong {
+    color: #344054;
+    font-weight: 700;
+}
+
+.legend-item em {
+    color: #172033;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.legend-source {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #e4eaf3;
+    font-size: 13px;
+    color: #667085;
+}
+
+/* ==============================
+   MAP LEAFLET
+============================== */
+
+.map-card {
+    min-height: 590px;
+}
+
+.leaflet-map-wrapper {
+    position: relative;
+    margin-top: 16px;
+    height: 525px;
+    border-radius: 9px;
+    overflow: hidden;
+    background: #dcecf7;
+    border: 1px solid #d7deea;
+}
+
+#mapSig {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.map-empty-message {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 28px;
+    background: rgba(248, 250, 252, 0.92);
+    color: #475467;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.map-label {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #172033;
+    font-size: 12px;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
+}
+
+.map-popup h4 {
+    margin: 0 0 10px;
+    color: #d92d20;
+    font-size: 16px;
+}
+
+/* =========================================================
+   POPUP INFORMASI PETA
+========================================================= */
+
+/*
+|--------------------------------------------------------------------------
+| Mengatur lebar isi popup
+|--------------------------------------------------------------------------
+| Lebar minimum mencegah tabel dan badge kategori terlalu sempit.
+|--------------------------------------------------------------------------
+*/
+.map-popup {
+    width: 100%;
+    min-width: 245px;
+    max-width: 300px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Judul kecamatan pada popup
+|--------------------------------------------------------------------------
+*/
+.map-popup h4 {
+    margin: 0 0 12px;
+    color: #d92d20;
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Tabel informasi popup
+|--------------------------------------------------------------------------
+*/
+.map-popup table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 12px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Sel tabel popup
+|--------------------------------------------------------------------------
+*/
+.map-popup td {
+    padding: 5px 4px;
+    vertical-align: top;
+    color: #172033;
+    line-height: 1.35;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Kolom label informasi
+|--------------------------------------------------------------------------
+| Label tetap rapi dan tidak mengambil seluruh lebar popup.
+|--------------------------------------------------------------------------
+*/
+.map-popup td:first-child {
+    width: 43%;
+    min-width: 100px;
+    padding-right: 8px;
+    color: #475467;
+    font-weight: 600;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Kolom nilai informasi
+|--------------------------------------------------------------------------
+*/
+.map-popup td:last-child {
+    width: 57%;
+    color: #172033;
+    font-weight: 600;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Badge kategori popup
+|--------------------------------------------------------------------------
+| white-space: nowrap memastikan "Sangat Tinggi" selalu satu baris.
+|--------------------------------------------------------------------------
+*/
+.popup-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: max-content;
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 800;
+
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+
+    vertical-align: middle;
+}
+
+/* ==============================
+   RINGKASAN WILAYAH
+============================== */
+
+.selected-region-card h2 {
+    margin: 12px 0 14px;
+    color: #d92d20;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.region-detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.region-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    font-size: 14px;
+}
+
+.region-detail span {
+    color: #344054;
+    font-weight: 500;
+}
+
+.region-detail strong {
+    color: #172033;
+    text-align: right;
+    font-weight: 800;
+}
+
+.text-red {
+    color: #d92d20 !important;
+}
+
+.text-green {
+    color: #2e7d32 !important;
+}
+
+.category-badge {
+    display: inline-flex;
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.region-section {
+    margin: 20px -22px 0;
+    padding: 18px 22px 0;
+    border-top: 1px solid #e4eaf3;
+}
+
+.region-section h4 {
+    margin: 0 0 15px;
+    font-size: 15px;
+    color: #172033;
+    font-weight: 800;
+}
+
+.region-status {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 9px;
+    background: #edf8ed;
+    border: 1px solid #c8e6c9;
+    color: #2e7d32;
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.status-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2e7d32;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.region-status strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.region-status p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2f6f35;
+}
+
+.empty-region {
+    margin-top: 18px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #667085;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ==============================
+   RESPONSIVE PART 2
+============================== */
+
+@media (max-width: 1500px) {
+    .map-content-row {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .selected-region-card {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1100px) {
+    .map-content-row {
+        grid-template-columns: 1fr;
+    }
+
+    .leaflet-map-wrapper {
+        height: 440px;
+    }
+}
+
+@media (max-width: 992px) {
+    .map-content-row {
+        padding: 22px 18px 34px;
+    }
+}

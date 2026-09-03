@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f7fb;
+    color: #0f172a;
+}
+
+.main-content {
+    margin-left: 292px;
+    min-height: 100vh;
+    padding-bottom: 32px;
+}
+
+.topbar {
+    height: 74px;
+    background: #ffffff;
+    border-bottom: 1px solid #dbe3ef;
+    padding: 16px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.topbar p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.date {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-profile .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #0f5db8;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.admin-profile strong {
+    display: block;
+    font-size: 13px;
+}
+
+.admin-profile span {
+    display: block;
+    font-size: 11px;
+    color: #64748b;
+}
+
+.hero-card {
+    margin: 28px 42px;
+    padding: 28px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #07539f, #1267d8);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-card h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.hero-card p {
+    margin: 0;
+    max-width: 720px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.hero-badge {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #1267d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.about-grid {
+    margin: 0 28px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 18px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #dbe3ef;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.card h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0;
+    line-height: 1.7;
+    color: #475569;
+    font-size: 14px;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: #0f5db8;
+    color: #ffffff;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.profile-card h3 {
+    margin-bottom: 4px;
+}
+
+.role {
+    color: #0f5db8 !important;
+    font-weight: 700;
+    margin-bottom: 18px !important;
+}
+
+.profile-info,
+.info-list {
+    margin-top: 18px;
+    display: grid;
+    gap: 12px;
+}
+
+.profile-info div,
+.info-list div {
+    padding: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.profile-info span,
+.info-list span {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.profile-info strong,
+.info-list strong {
+    font-size: 13px;
+}
+
+.wide-card {
+    margin: 18px 42px 0;
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.purpose-item {
+    display: flex;
+    gap: 14px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.purpose-item .icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #eaf3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.purpose-item h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.purpose-item p {
+    font-size: 13px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-list span {
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #eaf3ff;
+    color: #0f5db8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .topbar {
+        height: auto;
+        align-items: flex-start;
+        gap: 14px;
+        flex-direction: column;
+    }
+
+    .hero-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        margin: 0 42px;
+    }
+
+    .purpose-grid {
+        grid-template-columns: 1fr;
+    }
+}

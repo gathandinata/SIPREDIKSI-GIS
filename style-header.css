@@ -1,0 +1,186 @@
+/* =========================================================
+   TEMPLATE HEADER GLOBAL SIPREDIKSI GIS
+   Gunakan di semua halaman agar header seragam.
+========================================================= */
+
+.app-header {
+    min-height: 86px;
+    width: 100%;
+    padding: 0 32px;
+    background: #ffffff;
+    border-bottom: 1px solid #e4ebf5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.app-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+.app-sidebar-toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #0f172a;
+    font-size: 25px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+    flex-shrink: 0;
+}
+
+.app-sidebar-toggle:hover {
+    background: #f1f5f9;
+    color: #1455d9;
+}
+
+.app-page-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #e8f1ff;
+    color: #1455d9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.app-title-block {
+    min-width: 0;
+}
+
+.app-title-block h1 {
+    margin: 0 0 5px;
+    font-size: 24px;
+    line-height: 1.15;
+    color: #10172a;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+}
+
+.app-title-block p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+.app-header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.app-date-box {
+    min-height: 38px;
+    padding: 0 14px;
+    border: 1px solid #e4ebf5;
+    border-radius: 999px;
+    background: #f8fafc;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #334155;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.app-date-box strong {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.app-admin-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.app-admin-avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: #0b3b70;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.app-admin-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.2;
+}
+
+.app-admin-info strong {
+    color: #10172a;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.app-admin-info span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .app-header {
+        min-height: 78px;
+        padding: 14px 18px;
+    }
+
+    .app-title-block h1 {
+        font-size: 21px;
+    }
+
+    .app-title-block p {
+        font-size: 13px;
+    }
+
+    .app-date-box {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .app-header {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .app-header-right {
+        margin-left: auto;
+    }
+
+    .app-page-icon {
+        display: none;
+    }
+
+    .app-admin-info {
+        display: none;
+    }
+}
